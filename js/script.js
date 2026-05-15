@@ -45,6 +45,40 @@ async function carregarProdutosAmazon() {
       .replaceAll("'", "&#039;");
   }
 
+  function criarCardProduto(produto) {
+    const categoria = escaparHTML(produto.categoria || "Oferta");
+    const loja = escaparHTML(produto.loja || "Amazon");
+    const nome = escaparHTML(produto.nome);
+    const descricao = escaparHTML(produto.descricao);
+    const link = escaparHTML(produto.link);
+    const imagem = escaparHTML(produto.imagem || "");
+
+    const imagemHTML = imagem
+      ? `
+        <a href="${link}" target="_blank" rel="noopener sponsored" class="imagem-amazon-link">
+          <img src="${imagem}" alt="${nome}" class="imagem-produto-amazon" loading="lazy">
+        </a>
+      `
+      : "";
+
+    return `
+      <article class="card-amazon">
+        ${imagemHTML}
+        <span class="selo-amazon">${loja} • ${categoria}</span>
+        <h3>${nome}</h3>
+        <p>${descricao}</p>
+        <a
+          href="${link}"
+          target="_blank"
+          rel="noopener sponsored"
+          class="botao-amazon"
+        >
+          Ver oferta na Amazon
+        </a>
+      </article>
+    `;
+  }
+
   try {
     const resposta = await fetch("data/produtos-amazon.json", {
       cache: "no-store",
@@ -61,38 +95,32 @@ async function carregarProdutosAmazon() {
       return;
     }
 
-    container.innerHTML = produtos
-      .map((produto) => {
-        const categoria = escaparHTML(produto.categoria || "Oferta");
-        const loja = escaparHTML(produto.loja || "Amazon");
-        const nome = escaparHTML(produto.nome);
-        const descricao = escaparHTML(produto.descricao);
-        const link = escaparHTML(produto.link);
-        const imagem = escaparHTML(produto.imagem || "");
+    const produtosPorCategoria = produtos.reduce((grupos, produto) => {
+      const categoria = produto.categoria || "Outras Ofertas";
 
-        const imagemHTML = imagem
-          ? `
-            <a href="${link}" target="_blank" rel="noopener sponsored" class="imagem-amazon-link">
-              <img src="${imagem}" alt="${nome}" class="imagem-produto-amazon" loading="lazy">
-            </a>
-          `
-          : "";
+      if (!grupos[categoria]) {
+        grupos[categoria] = [];
+      }
+
+      grupos[categoria].push(produto);
+      return grupos;
+    }, {});
+
+    container.innerHTML = Object.entries(produtosPorCategoria)
+      .map(([categoria, itens]) => {
+        const tituloCategoria = escaparHTML(categoria);
 
         return `
-          <article class="card-amazon">
-            ${imagemHTML}
-            <span class="selo-amazon">${loja} • ${categoria}</span>
-            <h3>${nome}</h3>
-            <p>${descricao}</p>
-            <a
-              href="${link}"
-              target="_blank"
-              rel="noopener sponsored"
-              class="botao-amazon"
-            >
-              Ver oferta na Amazon
-            </a>
-          </article>
+          <section class="categoria-amazon">
+            <div class="cabecalho-categoria-amazon">
+              <h3>${tituloCategoria}</h3>
+              <span>${itens.length} produto${itens.length > 1 ? "s" : ""}</span>
+            </div>
+
+            <div class="grid-amazon">
+              ${itens.map(criarCardProduto).join("")}
+            </div>
+          </section>
         `;
       })
       .join("");
