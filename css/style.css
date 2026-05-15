@@ -934,3 +934,33 @@ main {
   transform: translateY(-2px);
   opacity: 0.9;
 }
+
+
+/* === Imagens dos produtos Amazon === */
+.imagem-amazon-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.imagem-produto-amazon {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.card-amazon {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-amazon .botao-amazon {
+  margin-top: auto;
+  width: fit-content;
+}

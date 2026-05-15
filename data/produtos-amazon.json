@@ -1,9 +1,58 @@
 [
   {
-    "categoria": "Casa",
+    "categoria": "Casa e Cozinha",
     "loja": "Amazon",
     "nome": "BLACK+DECKER Vaporizador de Roupas Portátil",
     "descricao": "Vaporizador portátil para roupas, ideal para facilitar o dia a dia em casa ou em viagens.",
     "link": "https://amzn.to/4eLeIYR"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Sanduicheira Grill Sandwich Mondial S-12",
+    "descricao": "Sanduicheira grill prática para preparar lanches rápidos, misto quente e receitas simples no dia a dia.",
+    "link": "https://amzn.to/4eLqKBv"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Panela Elétrica Grill PE-49 220V",
+    "descricao": "Panela elétrica grill para preparar refeições de forma prática, ideal para cozinha rápida e funcional.",
+    "link": "https://amzn.to/4ugM7Q1"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Sanduicheira Brunch Elgin Grill Antiaderente",
+    "descricao": "Sanduicheira grill antiaderente para lanches, tostados e preparo rápido de alimentos.",
+    "link": "https://amzn.to/4wz7yNH"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Mixer Turbo Elgin Preto",
+    "descricao": "Mixer de mão para vitaminas, molhos, cremes e receitas rápidas na cozinha.",
+    "link": "https://amzn.to/4wPtXqn"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Mixer Britânia BMX400 Preto",
+    "descricao": "Mixer com velocidades para preparar receitas, bater ingredientes e facilitar o preparo diário.",
+    "link": "https://amzn.to/4tFZFn8"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Chaleira Elétrica CE-06-R 220V",
+    "descricao": "Chaleira elétrica para aquecer água com praticidade no preparo de café, chá e bebidas quentes.",
+    "link": "https://amzn.to/3RopgTV"
+  },
+  {
+    "categoria": "Casa e Cozinha",
+    "loja": "Amazon",
+    "nome": "Ventilador de Mesa Mondial Super Power",
+    "descricao": "Ventilador de mesa para refrescar ambientes da casa com praticidade.",
+    "link": "https://amzn.to/4ug0fcn"
   }
 ]

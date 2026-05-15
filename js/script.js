@@ -68,9 +68,19 @@ async function carregarProdutosAmazon() {
         const nome = escaparHTML(produto.nome);
         const descricao = escaparHTML(produto.descricao);
         const link = escaparHTML(produto.link);
+        const imagem = escaparHTML(produto.imagem || "");
+
+        const imagemHTML = imagem
+          ? `
+            <a href="${link}" target="_blank" rel="noopener sponsored" class="imagem-amazon-link">
+              <img src="${imagem}" alt="${nome}" class="imagem-produto-amazon" loading="lazy">
+            </a>
+          `
+          : "";
 
         return `
           <article class="card-amazon">
+            ${imagemHTML}
             <span class="selo-amazon">${loja} • ${categoria}</span>
             <h3>${nome}</h3>
             <p>${descricao}</p>
