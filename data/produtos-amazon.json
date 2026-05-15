@@ -54,5 +54,40 @@
     "nome": "Ventilador de Mesa Mondial Super Power",
     "descricao": "Ventilador de mesa para refrescar ambientes da casa com praticidade.",
     "link": "https://amzn.to/4ug0fcn"
+  },
+  {
+    "categoria": "Beleza e Cuidados",
+    "loja": "Amazon",
+    "nome": "NIVEA Sabonete Líquido Óleo de Banho 200ml",
+    "descricao": "Sabonete líquido para banho com óleo, ideal para cuidado diário da pele.",
+    "link": "https://amzn.to/3PsgvYu"
+  },
+  {
+    "categoria": "Beleza e Cuidados",
+    "loja": "Amazon",
+    "nome": "Maybelline The Colossal Máscara de Cílios Lavável",
+    "descricao": "Máscara de cílios para destacar o olhar no dia a dia ou em produções especiais.",
+    "link": "https://amzn.to/4uaCguT"
+  },
+  {
+    "categoria": "Beleza e Cuidados",
+    "loja": "Amazon",
+    "nome": "Esponja de Maquiagem com Estojo",
+    "descricao": "Esponja para aplicação de maquiagem com estojo, prática para uso em casa ou na bolsa.",
+    "link": "https://amzn.to/4tB3TMA"
+  },
+  {
+    "categoria": "Beleza e Cuidados",
+    "loja": "Amazon",
+    "nome": "Elseve Óleo Extraordinário Finalizador Capilar",
+    "descricao": "Óleo finalizador para cabelos, indicado para brilho, maciez e cuidado dos fios.",
+    "link": "https://amzn.to/4dNdon6"
+  },
+  {
+    "categoria": "Beleza e Cuidados",
+    "loja": "Amazon",
+    "nome": "Cetaphil Creme Hidratante 453g",
+    "descricao": "Creme hidratante corporal para cuidado diário da pele, indicado para hidratação intensa.",
+    "link": "https://amzn.to/4dcbwEp"
   }
 ]
