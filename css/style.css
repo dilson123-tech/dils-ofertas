@@ -127,11 +127,6 @@ header nav a:hover {
   text-align: center;
   box-shadow: 0 0 10px rgba(177, 166, 166, 0.1);
 }
-
-.swiper {
-  margin-bottom: 10px;
-}
-
 .topo-links {
   display: flex;
   justify-content: center;
@@ -217,12 +212,6 @@ main {
   text-align: center;
   background-color: #fff;
 }
-
-.swiper.mySwiper {
-  max-width: 100%;
-  margin: 0 auto 10px auto;
-}
-
 .colecao-link {
   display: flex;
   justify-content: center;

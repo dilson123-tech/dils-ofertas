@@ -10,18 +10,7 @@ function ampliarImagem(img) {
   document.body.appendChild(modal);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (typeof Swiper !== "undefined" && document.querySelector(".mySwiper")) {
-    new Swiper(".mySwiper", {
-      direction: "horizontal",
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-  }
-});
+
 
 //function trocarImagem(src) {
   //document.getElementById("imagem-principal").src = src;
