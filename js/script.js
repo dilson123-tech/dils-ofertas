@@ -10,15 +10,86 @@ function ampliarImagem(img) {
   document.body.appendChild(modal);
 }
 
-const swiper = new Swiper(".mySwiper", {
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof Swiper !== "undefined" && document.querySelector(".mySwiper")) {
+    new Swiper(".mySwiper", {
+      direction: "horizontal",
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  }
 });
 
 //function trocarImagem(src) {
   //document.getElementById("imagem-principal").src = src;
 //}
+
+
+// === Catálogo dinâmico de produtos Amazon ===
+async function carregarProdutosAmazon() {
+  const container = document.getElementById("lista-produtos-amazon");
+
+  if (!container) {
+    return;
+  }
+
+  function escaparHTML(valor) {
+    return String(valor || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  try {
+    const resposta = await fetch("data/produtos-amazon.json", {
+      cache: "no-store",
+    });
+
+    if (!resposta.ok) {
+      throw new Error("Não foi possível carregar o catálogo Amazon.");
+    }
+
+    const produtos = await resposta.json();
+
+    if (!Array.isArray(produtos) || produtos.length === 0) {
+      container.innerHTML = "<p>Nenhuma oferta Amazon cadastrada no momento.</p>";
+      return;
+    }
+
+    container.innerHTML = produtos
+      .map((produto) => {
+        const categoria = escaparHTML(produto.categoria || "Oferta");
+        const loja = escaparHTML(produto.loja || "Amazon");
+        const nome = escaparHTML(produto.nome);
+        const descricao = escaparHTML(produto.descricao);
+        const link = escaparHTML(produto.link);
+
+        return `
+          <article class="card-amazon">
+            <span class="selo-amazon">${loja} • ${categoria}</span>
+            <h3>${nome}</h3>
+            <p>${descricao}</p>
+            <a
+              href="${link}"
+              target="_blank"
+              rel="noopener sponsored"
+              class="botao-amazon"
+            >
+              Ver oferta na Amazon
+            </a>
+          </article>
+        `;
+      })
+      .join("");
+  } catch (erro) {
+    console.error("Erro ao carregar produtos Amazon:", erro);
+    container.innerHTML = "<p>Não foi possível carregar as ofertas Amazon agora.</p>";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", carregarProdutosAmazon);

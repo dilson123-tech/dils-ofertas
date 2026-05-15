@@ -12,7 +12,6 @@
   <!-- NO HEAD -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- ANTES DO </body> -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <style>
@@ -25,15 +24,10 @@
 
 </head>
 <body>
-  <body>
-
-  <!-- Outros elementos antes... -->
 
 
 
-  <!-- Continuação do site... -->
 
-</body>
 
 
   <header>
@@ -113,23 +107,12 @@
     Produtos selecionados com link de afiliado. O preço pode mudar conforme disponibilidade da Amazon.
   </p>
 
-  <div class="grid-amazon">
-    <article class="card-amazon">
-      <span class="selo-amazon">Amazon</span>
-      <h3>BLACK+DECKER Vaporizador de Roupas Portátil</h3>
-      <p>
-        Vaporizador portátil para roupas, ideal para facilitar o dia a dia em casa ou em viagens.
-      </p>
-      <a
-        href="https://amzn.to/4eLeIYR"
-        target="_blank"
-        rel="noopener sponsored"
-        class="botao-amazon"
-      >
-        Ver oferta na Amazon
-      </a>
-    </article>
+  <div id="lista-produtos-amazon" class="grid-amazon" aria-live="polite">
+    <p class="carregando-produtos">Carregando ofertas Amazon...</p>
   </div>
+  <noscript>
+    <p>Ative o JavaScript para visualizar as ofertas Amazon.</p>
+  </noscript>
 </section>
 
 <h2>Achadinhos de Moda</h2>
@@ -678,31 +661,7 @@
     },
   });
 </script>
-
+  <script src="js/script.js"></script>
 </body>
-
-</html>
-
-
-
-
-
-<div class="container">
-  <script>
-  const miniaturas = document.querySelectorAll('.imagens-pequenas img');
-  const imagemDestaque = document.querySelector('.imagem-destaque');
-
-  miniaturas.forEach(miniatura => {
-    miniatura.addEventListener('click', () => {
-      const novaSrc = miniatura.getAttribute('src');
-      imagemDestaque.setAttribute('src', novaSrc);
-    });
-  });
-</script>
-<body>
-
-
-
-  </div>
 
 </html>
