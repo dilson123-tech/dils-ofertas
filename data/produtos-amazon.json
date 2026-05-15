@@ -89,5 +89,40 @@
     "nome": "Cetaphil Creme Hidratante 453g",
     "descricao": "Creme hidratante corporal para cuidado diário da pele, indicado para hidratação intensa.",
     "link": "https://amzn.to/4dcbwEp"
+  },
+  {
+    "categoria": "Eletrônicos e Acessórios",
+    "loja": "Amazon",
+    "nome": "Fire TV Stick HD com Controle Remoto por Voz Alexa",
+    "descricao": "Dispositivo para transformar a TV em smart, com acesso a streaming e controle por voz Alexa.",
+    "link": "https://amzn.to/43cT8Fq"
+  },
+  {
+    "categoria": "Eletrônicos e Acessórios",
+    "loja": "Amazon",
+    "nome": "Echo Dot 5ª Geração com Alexa",
+    "descricao": "Caixa de som inteligente com Alexa para música, automação, alarmes e comandos por voz.",
+    "link": "https://amzn.to/4nzCMAn"
+  },
+  {
+    "categoria": "Eletrônicos e Acessórios",
+    "loja": "Amazon",
+    "nome": "Fone de Ouvido Bluetooth",
+    "descricao": "Fone sem fio para ouvir músicas, atender chamadas e usar no dia a dia com mais praticidade.",
+    "link": "https://amzn.to/4nz3zww"
+  },
+  {
+    "categoria": "Eletrônicos e Acessórios",
+    "loja": "Amazon",
+    "nome": "Carregador USB-C Rápido",
+    "descricao": "Carregador rápido para celulares e dispositivos compatíveis com conexão USB-C.",
+    "link": "https://amzn.to/4wnJptk"
+  },
+  {
+    "categoria": "Eletrônicos e Acessórios",
+    "loja": "Amazon",
+    "nome": "Cabo USB-C Reforçado",
+    "descricao": "Cabo USB-C resistente para carregamento e transferência de dados em dispositivos compatíveis.",
+    "link": "https://amzn.to/4tBfew0"
   }
 ]
