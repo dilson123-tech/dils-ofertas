@@ -124,5 +124,40 @@
     "nome": "Cabo USB-C Reforçado",
     "descricao": "Cabo USB-C resistente para carregamento e transferência de dados em dispositivos compatíveis.",
     "link": "https://amzn.to/4tBfew0"
+  },
+  {
+    "categoria": "Informática e Home Office",
+    "loja": "Amazon",
+    "nome": "Teclado Bluetooth Ultrafino Portátil Recarregável",
+    "descricao": "Teclado Bluetooth compacto e portátil para usar com notebook, tablet, celular ou setup home office.",
+    "link": "https://amzn.to/4ui4MuK"
+  },
+  {
+    "categoria": "Informática e Home Office",
+    "loja": "Amazon",
+    "nome": "Microsoft Bluetooth Mouse Pêssego",
+    "descricao": "Mouse Bluetooth sem fio para trabalho, estudo e uso diário com mais praticidade.",
+    "link": "https://amzn.to/4902jwy"
+  },
+  {
+    "categoria": "Informática e Home Office",
+    "loja": "Amazon",
+    "nome": "Teclado Logitech Bluetooth Easy-Switch",
+    "descricao": "Teclado sem fio Logitech com conexão Bluetooth e troca rápida entre dispositivos.",
+    "link": "https://amzn.to/4uKqiIi"
+  },
+  {
+    "categoria": "Informática e Home Office",
+    "loja": "Amazon",
+    "nome": "Suporte Ajustável para Notebook",
+    "descricao": "Suporte ergonômico para notebook com regulagem de altura, ideal para mesa de trabalho e estudo.",
+    "link": "https://amzn.to/3R2Zogt"
+  },
+  {
+    "categoria": "Informática e Home Office",
+    "loja": "Amazon",
+    "nome": "Hub USB-C Multiportas com HDMI",
+    "descricao": "Adaptador USB-C com HDMI e múltiplas conexões para notebook, monitor e acessórios.",
+    "link": "https://amzn.to/3RcDLdB"
   }
 ]
