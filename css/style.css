@@ -619,15 +619,6 @@ main {
   font-weight: bold;
   text-decoration: underline;
 }
-
-.video-jaci {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
 .caixa-apresentacao {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -648,20 +639,6 @@ main {
   font-weight: bold;
   text-decoration: underline;
 }
-.redes-jaci {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.redes-jaci img {
-  margin: 0 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.redes-jaci img:hover {
-  transform: scale(1.1);
-}
-
 /* No style.css: */
 
 .galeria-vip-section {
@@ -739,21 +716,6 @@ main {
 .imagem-destaque.fade-out {
   opacity: 0;
 }
-.redes-jaci {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.redes-jaci img {
-  width: 50px;
-  margin: 0 10px;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
-
-.redes-jaci img:hover {
-  transform: scale(1.2);
-}
 .achadinhos-moda {
   background-color: #a29f9b;
   padding: 40px 10px;
@@ -824,18 +786,6 @@ main {
 .produto:hover {
   transform: scale(1.03);
 }
-
-.btn-shopee {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #ff5722;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
 .grid-produtos {
   padding-top: 0;
   margin-top: 0;
@@ -1002,4 +952,154 @@ main {
   color: #111;
   font-weight: 700;
   font-size: 0.85rem;
+}
+
+
+/* === Hero animado Dils Ofertas === */
+.hero-dils-ofertas {
+  max-width: 1180px;
+  margin: 34px auto 28px;
+  padding: 34px 28px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 153, 0, 0.28), transparent 34%),
+    linear-gradient(135deg, #fff7dc 0%, #ffffff 48%, #fff0b8 100%);
+  border: 1px solid #f0cf74;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-conteudo {
+  text-align: left;
+}
+
+.hero-selo {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ff9900;
+  color: #111;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.hero-dils-ofertas h2 {
+  margin: 0 0 12px;
+  color: #1f1f1f;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.hero-dils-ofertas p {
+  max-width: 720px;
+  margin: 0 0 20px;
+  color: #4a3b18;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.hero-tags span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: #302400;
+  border: 1px solid #efd47a;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.hero-botao {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-botao:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.hero-animacao {
+  position: relative;
+  min-height: 280px;
+}
+
+.hero-card {
+  position: absolute;
+  min-width: 210px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: #fff;
+  color: #1f1f1f;
+  font-weight: 900;
+  border: 1px solid #f0cf74;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.13);
+  animation: flutuarHero 4s ease-in-out infinite;
+}
+
+.card-1 {
+  top: 18px;
+  left: 18px;
+}
+
+.card-2 {
+  top: 92px;
+  right: 6px;
+  animation-delay: 0.35s;
+}
+
+.card-3 {
+  bottom: 74px;
+  left: 2px;
+  animation-delay: 0.7s;
+}
+
+.card-4 {
+  bottom: 12px;
+  right: 28px;
+  animation-delay: 1.05s;
+}
+
+@keyframes flutuarHero {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .hero-dils-ofertas {
+    grid-template-columns: 1fr;
+    padding: 26px 18px;
+    margin: 24px 12px;
+  }
+
+  .hero-animacao {
+    min-height: 230px;
+  }
+
+  .hero-card {
+    min-width: 170px;
+    font-size: 0.9rem;
+  }
 }
