@@ -34,8 +34,23 @@ async function carregarProdutosAmazon() {
       .replaceAll("'", "&#039;");
   }
 
+  function obterIconeCategoria(categoria) {
+    const nome = String(categoria || "").toLowerCase();
+
+    if (nome.includes("cozinha") || nome.includes("casa")) return "🍳";
+    if (nome.includes("beleza")) return "✨";
+    if (nome.includes("eletr")) return "🎧";
+    if (nome.includes("inform")) return "💻";
+    if (nome.includes("ferrament")) return "🧰";
+    if (nome.includes("achadinho")) return "💡";
+
+    return "🛒";
+  }
+
   function criarCardProduto(produto) {
-    const categoria = escaparHTML(produto.categoria || "Oferta");
+    const categoriaOriginal = produto.categoria || "Oferta";
+    const categoria = escaparHTML(categoriaOriginal);
+    const icone = escaparHTML(obterIconeCategoria(categoriaOriginal));
     const loja = escaparHTML(produto.loja || "Amazon");
     const nome = escaparHTML(produto.nome);
     const descricao = escaparHTML(produto.descricao);
@@ -48,7 +63,11 @@ async function carregarProdutosAmazon() {
           <img src="${imagem}" alt="${nome}" class="imagem-produto-amazon" loading="lazy">
         </a>
       `
-      : "";
+      : `
+        <div class="produto-icone-amazon" aria-hidden="true">
+          <span>${icone}</span>
+        </div>
+      `;
 
     return `
       <article class="card-amazon">
